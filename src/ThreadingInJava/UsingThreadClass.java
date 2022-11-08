@@ -5,13 +5,12 @@
 */
 public class UsingThreadClass extends Thread{
     public static void main (String [] args ){
-        UsingThreadClass thread1 = new UsingThreadClass();
+        UsingThreadClass thread= new UsingThreadClass();
         thread1.start();     
     }
 
     //Overring run method of Thread Class 
     public void run (){
-
         System.out.println("Hello From Thread");
     }
 

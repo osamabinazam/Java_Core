@@ -3,18 +3,31 @@
     1 -> Extends Thread Class
     2 -> Implement Runnable Interface
 */
-public class UsingThreadClass extends Thread{
+public class UsingThreadClass {
     public static void main (String [] args ){
-        UsingThreadClass thread= new UsingThreadClass();
-        thread1.start();     
+        YourTask yourTask = new YourTask();
+        MyTask myTask = new MyTask();
+        yourTask.start();
+        myTask.start();
+
     }
-
-    //Overring run method of Thread Class 
-    public void run (){
-        System.out.println("Hello From Thread");
-    }
-
-
 }
 
+//Run as a seperate Independent Thread
+class YourTask extends Thread {
+    public void run (){
+        //This is Thread 1
+        for (int i=1; i<=10; i++){
+        System.out.println("YourTask Printing  " + i);
+        }
+    }
+}
+//Run as a seperate Independent Thread
+class MyTask extends Thread{
+    public void run(){
+        for(int i=1; i<=10; i++){
+            System.out.println("MyTask Printing "+ i);
+        }
+    }
+}
 

@@ -33,6 +33,7 @@ class OddNumber implements Runnable{
         for(int i =1; i<=20; i=i+2){
             System.out.println("Even Number " + i + " From Thread 2");
         }
+        System.out.println("Odd Thread Is Terminating....");
     }
-    System.out.println("Odd Thread is Terminating....");
+    
 }

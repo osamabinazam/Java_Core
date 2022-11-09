@@ -1,7 +1,7 @@
 
 
 //Functional Interface
-public interface MyInterface {
+interface MyInterface {
 
     //Abstract Method
     public int printSum (int num1, int num2);
@@ -22,7 +22,7 @@ public class LambdaWithMultipleLines implements MyInterface{
         MyInterface ref;
         int n1 = 3;
         int n2 = 4;
-        System.out.println("Sum is : " + ref.);
+        System.out.println("Sum is : " );
         
 
 
@@ -30,6 +30,11 @@ public class LambdaWithMultipleLines implements MyInterface{
     public static void printBio(){
         System.out.println("Name : Osama Bin Azam\nGender : Male\nAge : 21 years");
 
+    }
+    @Override
+    public int printSum(int num1, int num2) {
+        // TODO Auto-generated method stub
+        return 0;
     }   
 
 }

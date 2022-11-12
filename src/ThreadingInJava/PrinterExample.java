@@ -1,6 +1,6 @@
 /*
    - Considering one printer which is shared between two or more people 
-   = People are differentiated by Threads
+   - People are differentiated by Threads
 */
 
 class Printer {
@@ -13,17 +13,22 @@ class Printer {
 
 public class PrinterExample {
     public static void main(String [] args){
+        Thread osama = new Thread(new user1() );
+        osama.start();
+
+        Thread Sam = new Thread(new user2());
+        Sam.start();;
 
     }
 
 }
 class user1 implements Runnable {
     public void run (){
-
+        new Printer().printDoc(10, "Osama's Document");
     }
 }
 class user2 implements Runnable{
     public void run (){
-        
+        new Printer().printDoc(10, "Sam's Document");
     }
 }

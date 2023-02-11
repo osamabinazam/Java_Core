@@ -1,0 +1,148 @@
+-> Collection are kind of containers (Dynamic containers) that group multiple things in a single unit
+-> Provide a way to store and manipulate a group of objects 
+-> Many Operation can be performed on the data like sorting, searching, insertion,etc
+-> Java Collecction Framework provides many interfaces and class
+-> Collection Heirarchy : set of APIs are linked together in parent child relationship
+Root Interface:     Iterable 
+                        |
+                    Collections
+------------------------------------------------
+|                       |                      |
+List                  Queue                   Sets
+
+-> These are interfaces
+-> Lists:
+        Three Fundamental Classes that implements list interface
+        -1 ArrayList
+        -2 LinkedList
+        -3 Vector
+             |
+            Stack (Inherit from Vector)
+
+-> Queue
+    Fundamental Classes that implements Queue interface
+    -1 Priority Queue
+
+    -> Deque (Double Ended Queue)
+        Deque is an extension of queue so Classes that implements are:
+        -1 ArrayDeque
+        -2 LinkedList
+-> Set
+    -1 HashSet
+    -2 LinkedHashSet
+
+    -> SortedSet
+        An extension to Set 
+        -1 TreeSet
+
+These are the data Structures which are provided by Collection Framework, There is one thing more to offer by Collection Framework which is known as MAP
+
+-> MAP:
+    - An Interface.
+    -  Classes which implements MAP are:
+        -1 HashMap 
+        -2 HashTable
+    - SortedMap is an extension to Map and TreeMap Class implements it.
+
+
+Interfaces in Java:
+    - Reference type which is similar to classes but only contains abstract methods
+    - Method must be implement whenever an interface is implemented
+    - Interfaces can not be instantiated
+    - Interfaces don't contain constructors or instance fields
+    - Implement by classes
+    - Interface can extend multiples interfaces
+
+Coming Back to Collection Framework:
+
+ -> Iterator:  
+        - Provide facility of iteraing the elements only in forward direction.
+        - methods:
+            1-> public boolean hasNext();
+            2-> public Object next();
+            3-> pubilc void remove();
+ -> Interable:
+        - Root interface for all Collection class.
+        - Collection interfaces along with its all subclasses also implement iterable interface.
+        - Method:
+            1-> Iterator<T> iterator();
+ -> Collection:
+        - Interfaces implemeted by all the classes in collection framework and declare method that every collection contain.
+        - Methods:
+            1-> void clear();
+            2-> Boolean add (Object obj);
+            3-> Boolean addAll(Object obj);
+            and more 
+ -> List Interface
+        - Extend collection.
+        - Contain order collection of elements.
+        - Contain duplicate values also.
+        - Classes:
+            -1 ArrayList:
+
+                - This class implements list interface where elements can be dynamically add or remove from the list
+                - Size of list increase or decrease dynamically
+                - Index approach used to add data in the list.
+                - Object Of ArrayList Class : ArrayList object = new ArrayList();
+                - Constructors:
+                    1-> ArrayList()
+                        - Builds an empty ArrayList
+                    2-> ArrayList(Collection c)
+                        - Builds an ArrayList that is initialized with the elemets of Collection c.
+                    3-> ArrayList(int capacity)
+                        - Builds An ArrayList of specified capacity
+                - Methods in the class are:
+
+                    1-> boolean add (Collection c){} or boolean add(Object o){}
+                        - Append Collection of elemets or an element to the end of the list.
+                    2-> boolean addAll(Collection c){}
+                        - Append all of the elemets of specified collection to the end of the list.
+                        - Added in the order that element are returned by the specified collection's iterator.
+                        - Throw NullPointerException, if specified collection is null.
+
+                    3-> void add (int index , Object element){}
+                        - Insert specified element in specified position.
+                        - Throw IndexOutOfBoundsException, if specified position not in the range (0<index > size()).
+                    
+                    4-> boolean addAll (int index, Collection c){}
+                        - Insert specified collection of elements in specified position.
+                        - Throw IndexOutOfBoundsException, if specified position not in the range (0<index > size()).
+                        - Throw NullPointerException, if specified collection is null.
+
+                    4-> Object[] toArray(){}
+                        - Return an array of containing all elements in correct order.
+                        - Throw NullPointerException, if specified collection is null.
+                    5-> int indexOf (Object o){}
+                        - Return the first occurence of the object. 
+
+                    6-> int lastIndexOf(Object o){}
+                        - Return the index of last occurence of the Object.
+                    
+                    7-> Object clone(){}
+                        - Return the copy of the ArrayList
+
+                    8-> void clear(){}
+                        - Remove all elemets from the list.
+
+                    9-> void trimToSize(){}
+                        - Reduce the size of the list to the elemets present in the list.
+
+                    10-> protected void removeRange (int fromIndex, int toIndex){}
+                        - Remove the elements between define range.
+                        - fromIndex (Inclusive), toIndex (Exclusive)
+                        - Throw IndexOutOfBoundsException
+
+                    11-> Object remove (int index ){}
+                        - Remove element from specified index
+                        - Throw IndexOutOfBoundsException
+                    
+                    12-> Object set(int index, Object o ){}
+                        - Replace element at the specified position in the list with specified object
+                        - Throw IndexOutOfBoundsException
+                    
+                    13-> int size(){}
+                        - Return the size of List
+
+                    Other Method such as equal(Object o ), contains(Object o), containsAll( Collection c), sublist(int from , int to), etc
+
+
